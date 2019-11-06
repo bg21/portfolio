@@ -1,0 +1,96 @@
+@media screen and (max-width: 960px){
+    section.depoimentos div.box{
+        position: absolute;
+        top: 200px;
+        left: 0;
+        width: 60%;
+        margin: 0 50px;
+        padding: 40px;
+    }
+}
+@media screen and (max-width: 768px){
+    header div.desktop{
+        display: none;
+    }
+    header div.mobile{
+        display: block;
+    }
+    header >.container{
+        padding: 0 20px;
+    }
+    header .flex{
+        background-color: #31475e;;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+    header div.texto_header{
+        padding: 150px 0;
+        text-align: center;
+        max-width: none;
+        width: 100%;
+    }
+    section.descricao2 div.texto_descricao2{
+        width: 100%;
+    }
+    section.descricao2 img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    section.servicos{
+        margin-top: 150px;
+    }
+    section.servicos div.flex_servicos div.single{
+        width: 50%;
+    }
+    section.empresas div.single_empresas div.wraper_empresas{
+        width: 50%;
+    }
+    section.contato{
+        padding: 80px 20px;
+    }
+    section.contato div.groups div.group{
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    section.contato div.groups form div.group label{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer div.flex_footer{
+        width: 100%;
+    }
+    footer div.flex_footer form input[type=text]{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 520px){
+    header div.texto_header form input[type=text]{
+        width: 100%;
+    }
+    header div.texto_header form input[type=submit]{
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+        section.depoimentos div.box{
+            position: absolute;
+            top: 350px;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+        }
+        section.servicos div.flex_servicos div.single{
+            width: 100%;
+        }
+        section.servicos{
+            margin-top: 300px;
+        }
+        section.empresas div.single_empresas div.wraper_empresas{
+            width: 100%;
+        }
+}
