@@ -496,15 +496,26 @@ a, .navbar-link, .btn-text {
 
 .progress-item:not(:last-child) { margin-block-end: 16px; }
 
-.progress {
+.progress-item .progress {
+  width: 0;
+  display: block;
+  overflow: hidden;
   background-color: var(--color-text-light);
   height: 6px;
-  width: 100%;
   border-radius: var(--radius-pill);
-  overflow: hidden;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
 }
-
-.progress-fill { height: inherit; }
+.progress-item.revealed .progress {
+  width: 100%;
+}
+.progress-fill {
+  height: inherit;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4,0,0.2,1) 1.2s;
+}
+.progress-item.revealed .progress-fill {
+  width: var(--progress-width, 100%);
+}
 
 .about-card { text-align: center; }
 
@@ -630,7 +641,7 @@ a, .navbar-link, .btn-text {
 \*-----------------------------------*/
 
 .contact {
-  padding-block-end: 0;
+ 
   background-color: var(--color-bg);
   color: var(--color-text);
 }
@@ -1243,6 +1254,7 @@ img:hover, .project-card .card-banner:hover {
   justify-content: center;
   text-align: center;
   width: 100%;
+  max-width: 700px;
   height: 540px;
   min-height: 540px;
   max-height: 540px;
@@ -1328,5 +1340,40 @@ img:hover, .project-card .card-banner:hover {
   }
   .carousel-img {
     max-width: 100%;
+  }
+}
+
+/* === Botão WhatsApp Fixo === */
+#whatsapp-fixed {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+#whatsapp-fixed:hover {
+  background: #128c7e;
+  transform: scale(1.08);
+}
+@media (max-width: 600px) {
+  #whatsapp-fixed {
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
   }
 }

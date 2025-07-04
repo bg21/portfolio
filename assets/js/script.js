@@ -68,8 +68,37 @@ for (let i = 0, len = revealDelayElements.length; i < len; i++) {
   revealDelayElements[i].style.transitionDelay = revealDelayElements[i].dataset.revealDelay;
 }
 
-window.addEventListener("scroll", reveal);
-window.addEventListener("load", reveal);
+// Animação das barras de progresso ao revelar
+function animateProgressBars() {
+  // Revela cada progress-item quando a progress-list for revelada
+  const progressLists = document.querySelectorAll('.progress-list.revealed');
+  progressLists.forEach(list => {
+    list.querySelectorAll('.progress-item').forEach(item => {
+      item.classList.add('revealed');
+    });
+  });
+
+  // Anima largura das barras
+  const progressItems = document.querySelectorAll('.progress-item.revealed');
+  progressItems.forEach(item => {
+    const fill = item.querySelector('.progress-fill');
+    if (fill) {
+      const match = fill.getAttribute('style').match(/width:\s*(\d+)%/);
+      if (match) {
+        fill.style.setProperty('--progress-width', match[1] + '%');
+      }
+    }
+  });
+}
+
+// Chama a animação junto com o reveal
+const originalReveal = reveal;
+window.reveal = function() {
+  originalReveal();
+  animateProgressBars();
+};
+window.addEventListener('scroll', window.reveal);
+window.addEventListener('load', window.reveal);
 
 // Efeito de digitação no título principal
 const typedText = document.getElementById('typed-text');
@@ -83,21 +112,6 @@ function typeEffect() {
   }
 }
 window.addEventListener('DOMContentLoaded', typeEffect);
-
-// Botão de voltar ao topo
-const backToTop = document.getElementById('back-to-top');
-if (backToTop) {
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
 
 // === CUSTOM CAROUSEL ===
 (function() {
