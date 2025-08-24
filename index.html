@@ -1,469 +1,963 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Pessoal</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/icons/theme-toggle.svg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Juliana Costa | Desenvolvedora Full Stack - PHP, Laravel, JavaScript, SEO</title>
+  <meta name="title" content="Juliana Costa | Desenvolvedora Full Stack - PHP, Laravel, JavaScript, SEO">
+  <meta name="description" content="Desenvolvedora Full Stack com 3+ anos de experiência em PHP, Laravel, JavaScript, TypeScript e SEO. Especialista em aplicações web seguras, acessíveis e de alta performance. Portfólio com projetos reais.">
+  <meta name="keywords" content="desenvolvedora full stack, PHP, Laravel, JavaScript, TypeScript, SEO, desenvolvimento web, aplicações web, acessibilidade, performance, portfólio">
+  <meta name="author" content="Juliana Costa">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://julianacosta.dev/">
+  <meta property="og:title" content="Juliana Costa | Desenvolvedora Full Stack - PHP, Laravel, JavaScript, SEO">
+  <meta property="og:description" content="Desenvolvedora Full Stack com 3+ anos de experiência em PHP, Laravel, JavaScript, TypeScript e SEO. Especialista em aplicações web seguras, acessíveis e de alta performance.">
+  <meta property="og:image" content="https://julianacosta.dev/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Juliana Costa - Portfólio">
+  <meta property="og:locale" content="pt_BR">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://julianacosta.dev/">
+  <meta property="twitter:title" content="Juliana Costa | Desenvolvedora Full Stack - PHP, Laravel, JavaScript, SEO">
+  <meta property="twitter:description" content="Desenvolvedora Full Stack com 3+ anos de experiência em PHP, Laravel, JavaScript, TypeScript e SEO. Especialista em aplicações web seguras, acessíveis e de alta performance.">
+  <meta property="twitter:image" content="https://julianacosta.dev/images/og-image.jpg">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#6366f1">
+  <meta name="msapplication-TileColor" content="#6366f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Juliana Costa">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://julianacosta.dev/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            accent: '#f59e0b',
+            dark: '#1f2937',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'display': ['Poppins', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'fade-in': 'fadeIn 0.8s ease-out'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+      to { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
 </head>
-<body>
-  <div class="floating-particles global-particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-  <header class="navbar" role="navigation" aria-label="Menu principal">
-    <div class="navbar-content">
-      <span class="logo" tabindex="0">Juliana</span>
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav>
-        <ul>
-          <li><a href="#hero" class="nav-link" aria-current="page">Início</a></li>
-          <li><a href="#skills" class="nav-link">Habilidades</a></li>
-          <li><a href="#projects" class="nav-link">Projetos</a></li>
-          <li><a href="#contact" class="nav-link">Contato</a></li>
-        </ul>
-        <button id="theme-toggle" aria-label="Alternar tema" tabindex="0">
-          <i class="fa-solid fa-moon" id="theme-icon"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="floating-particles section-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      
-      <div class="hero-shape">
-        <img src="images/hero-shape.svg" alt="Forma decorativa" class="shape-decoration">
-      </div>
-      
-      <img src="images/hero-banner.png" alt="Avatar" class="avatar">
-      <h1>Juliana da Silva Costa</h1>
-              <h2><span id="typing-effect"></span></h2>
-      <p>Desenvolvimento web com foco total em segurança, SEO técnico, acessibilidade e alta performance. Transformo ideias em aplicações robustas e centradas no usuário.
-
-      </p>
-      
-      <div class="hero-actions">
-        <a href="#projects" class="cta">
-          <i class="fas fa-rocket"></i>
-          Ver Portfólio
-        </a>
-        <a href="#contact" class="cta-secondary">
-          <i class="fas fa-envelope"></i>
-          Fale Comigo
-        </a>
-      </div>
-      
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">3+</span>
-          <span class="stat-label">Anos de Experiência</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">50+</span>
-          <span class="stat-label">Projetos Entregues</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Satisfação do Cliente</span>
-        </div>
-      </div>
-      
-      <div class="scroll-indicator" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">
-        <span class="scroll-text">Role para baixo</span>
-        <div class="scroll-arrow"></div>
-      </div>
-    </section>
-
-    <section class="about" id="about" tabindex="-1" aria-labelledby="about-title">
-      <div class="floating-particles section-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      <h2 id="about-title">Sobre mim</h2>
-      <p class="about-text">
-        Sou graduada em Análise de Sistemas e pós-graduado em Segurança da Informação. Atuo como desenvolvedor full stack, com domínio de tecnologias front-end como HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS e Angular, além de forte experiência em back-end com PHP (Laravel) e MySQL.<br><br>
-        Tenho conhecimento intermediário em Node.js e Java, e utilizo Git como controle de versão. Também tenho familiaridade com Figma para integração com o design e amplo domínio em SEO técnico.<br><br>
-        Valorizo a construção de soluções seguras, acessíveis e altamente performáticas, com foco em boas práticas, código limpo e eficiência real. Busco contribuir em projetos que exigem responsabilidade técnica e entrega com propósito.
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills about-section" id="skills" aria-label="about">
-      <div class="floating-particles section-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      <div class="container">
-        <div class="wrapper">
-          
-          <div data-reveal="left" class="revealed skills-desc">
-            <h2 class="h2 section-title">O que eu faço?</h2>
-            <p class="section-text">
-              Desenvolvo interfaces modernas e responsivas com HTML5, CSS3, JavaScript e Tailwind CSS, priorizando performance, acessibilidade e SEO técnico. No back-end, atuo com PHP (Laravel) e MySQL, construindo APIs robustas, seguras e escaláveis.
-            </p>
-            <p class="section-text">
-              Tenho experiência com Node.js, uso Git no versionamento e integro com facilidade protótipos do Figma. Também tenho conhecimento em TypeScript e Java, além de atuar com frameworks como Angular em nível intermediário.
-            </p>
-            
-            <div class="skills-cards">
-              <div class="skill-icon-card">
-                <img src="images/icon-1.svg" alt="Web Design" class="skill-icon">
-                <h4>Web Design</h4>
-                <p>Criação de interfaces modernas, responsivas e focadas na experiência do usuário.</p>
-              </div>
-              <div class="skill-icon-card">
-                <img src="images/icon-2.svg" alt="Desenvolvimento Web" class="skill-icon">
-                <h4>Desenvolvimento Web</h4>
-                <p>Desenvolvimento de sites e sistemas utilizando as melhores práticas e tecnologias atuais.</p>
-              </div>
-              <div class="skill-icon-card">
-                <img src="images/icon-3.svg" alt="Banco de Dados" class="skill-icon">
-                <h4>Banco de Dados</h4>
-                <p>Modelagem, integração e otimização de bancos de dados para aplicações robustas.</p>
-              </div>
-              <div class="skill-icon-card">
-                <img src="images/icon-4.svg" alt="SEO" class="skill-icon">
-                <h4>SEO</h4>
-                <p>Otimização de sites para mecanismos de busca, aumentando a visibilidade e alcance online.</p>
-              </div>
-            </div>
-          </div>
-          <ul class="progress-list revealed" data-reveal="right">
-            <li class="progress-item revealed"><div class="label-wrapper"><p>HTML5</p><span class="span">100 %</span></div><div class="progress"><div class="progress-fill" style="width: 100%; background-color: rgb(228, 77, 38);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>CSS3</p><span class="span">90 %</span></div><div class="progress"><div class="progress-fill" style="width: 90%; background-color: rgb(38, 77, 228);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>JavaScript</p><span class="span">70 %</span></div><div class="progress"><div class="progress-fill" style="width: 70%; background-color: rgb(240, 219, 79);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>SEO</p><span class="span">90 %</span></div><div class="progress"><div class="progress-fill" style="width: 90%; background-color: rgb(227, 166, 182);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>MySql</p><span class="span">70 %</span></div><div class="progress"><div class="progress-fill" style="width: 70%; background-color: rgb(0, 117, 143);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>PHP</p><span class="span">90 %</span></div><div class="progress"><div class="progress-fill" style="width: 90%; background-color: rgb(120, 124, 181);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Laravel</p><span class="span">50 %</span></div><div class="progress"><div class="progress-fill" style="width: 50%; background-color: rgb(255, 45, 32);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Bootstrap</p><span class="span">50 %</span></div><div class="progress"><div class="progress-fill" style="width: 50%; background-color: rgb(86, 61, 124);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>NodeJS</p><span class="span">30 %</span></div><div class="progress"><div class="progress-fill" style="width: 30%; background-color: rgb(104, 160, 99);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Angular</p><span class="span">20 %</span></div><div class="progress"><div class="progress-fill" style="width: 20%; background-color: rgb(221, 0, 49);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>TypeScript</p><span class="span">60 %</span></div><div class="progress"><div class="progress-fill" style="width: 60%; background-color: rgb(49, 120, 198);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Tailwind CSS</p><span class="span">50 %</span></div><div class="progress"><div class="progress-fill" style="width: 50%; background-color: rgb(56, 189, 248);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Git</p><span class="span">80 %</span></div><div class="progress"><div class="progress-fill" style="width: 80%; background-color: rgb(243, 79, 41);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Figma</p><span class="span">70 %</span></div><div class="progress"><div class="progress-fill" style="width: 70%; background-color: rgb(162, 89, 255);"></div></div></li>
-            <li class="progress-item revealed"><div class="label-wrapper"><p>Java</p><span class="span">40 %</span></div><div class="progress"><div class="progress-fill" style="width: 40%; background-color: rgb(231, 111, 0);"></div></div></li>
-          </ul>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Projetos -->
-    <section class="projects" id="projects" tabindex="-1" aria-labelledby="projects-title">
-      <div class="floating-particles section-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      <h2 id="projects-title">Projetos</h2>
-      <div class="carousel" role="region" aria-label="Carrossel de projetos">
-        <button class="carousel-btn prev" aria-label="Projeto anterior" tabindex="0">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <div class="carousel-track" tabindex="0" aria-live="polite">
-          <div class="project-card" data-index="0">
-            <img src="images/project-1.jpeg" alt="Projeto 1">
-            <div class="project-info">
-              <h3>Gerador de Propostas
-              </h3>
-              <p>Aplicação web desenvolvida para automatizar a criação, personalização e envio de propostas comerciais profissionais. O sistema permite que empresas e prestadores de serviço criem propostas em PDF com identidade visual própria.
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="1">
-            <img src="images/project-2.jpeg" alt="Projeto 2">
-            <div class="project-info">
-              <h3>Encurtador de Links
-              </h3>
-              <p>Sistema web para encurtamento de URLs com geração de links curtos, estatísticas em tempo real e foco em segurança, desempenho e rastreamento inteligente. 
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="2">
-            <img src="images/project-3.jpeg" alt="Projeto 3">
-            <div class="project-info">
-              <h3>Calculadora Freelancer
-              </h3>
-              <p>Aplicação web voltada para freelancers e profissionais autônomos calcularem o valor ideal de seus serviços com base em horas de trabalho, despesas fixas, impostos e lucro desejado. O sistema ajuda na formação de preços de forma profissional, transparente e sustentável.
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="3">
-            <img src="images/project-4.jpeg" alt="Projeto 4">
-            <div class="project-info">
-              <h3>Baixador de Vídeos do YouTube
-              </h3>
-              <p>Aplicação web para baixar vídeos e áudios do YouTube de forma rápida e simples. O sistema permite inserir a URL do vídeo e escolher o formato desejado (MP4, MP3, resoluções variadas), com foco em usabilidade, desempenho e compatibilidade com múltiplos dispositivos.
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="4">
-            <img src="images/project-5.jpeg" alt="Projeto 5">
-            <div class="project-info">
-              <h3>Gerador de README.md para GitHub
-              </h3>
-              <p>Aplicação web que facilita a criação de arquivos README.md personalizados para projetos no GitHub. O sistema guia o usuário por etapas simples para gerar um README estruturado, com foco em clareza, boas práticas e apresentação profissional do repositório.
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="5">
-            <img src="images/project-6.jpeg" alt="Projeto 6">
-            <div class="project-info">
-              <h3>Baixador de Thumbnails do YouTube
-              </h3>
-              <p>Ferramenta web simples e rápida para baixar a imagem de capa (thumbnail) de qualquer vídeo do YouTube em diferentes resoluções. Basta inserir a URL do vídeo e escolher entre os tamanhos disponíveis (HD, SD, MQ).
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="6">
-            <img src="images/project-7.jpeg" alt="Projeto 7">
-            <div class="project-info">
-              <h3>Minificador de Código CSS
-              </h3>
-              <p>Ferramenta online para minificar arquivos CSS, reduzindo o tamanho do código ao remover espaços, quebras de linha e comentários, sem afetar o funcionamento do estilo. O objetivo é entregar CSS otimizado para produção, melhorando performance de carregamento e reduzindo o consumo de banda.
-
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-index="7">
-            <img src="images/project-8.jpeg" alt="Projeto 8">
-            <div class="project-info">
-              <h3>Criador de QR Code e Links PIX
-              </h3>
-              <p>Aplicativo web que gera códigos PIX válidos, incluindo link de pagamento e QR Code, prontos para serem usados em transações reais. Permite que usuários criem cobranças instantâneas para valores fixos ou variáveis, com dados completos para receber pagamentos via PIX.
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-btn next" aria-label="Próximo projeto" tabindex="0">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-      
-    </section>
-
-    <!-- Contato -->
-    <section class="contact" id="contact" tabindex="-1" aria-labelledby="contact-title">
-      <div class="floating-particles section-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      <h2 id="contact-title">Contato</h2>
-      <div class="contact-icons">
-        <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-          <span>WhatsApp</span>
-        </a>
-        <a href="mailto:juhcosta23@gmail.com" aria-label="E-mail">
-          <i class="fas fa-envelope"></i>
-          <span>E-mail</span>
-        </a>
-        <a href="https://www.linkedin.com/in/bg21/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/bg21" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=5561981016563" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp" tabindex="0">
-    <i class="fab fa-whatsapp fa-2x"></i>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+  <!-- Skip to main content link for screen readers -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-50">
+    Pular para o conteúdo principal
   </a>
 
-  <!-- Botão de voltar ao topo -->
-  <button id="backToTop" title="Voltar ao topo" aria-label="Voltar ao topo" tabindex="0">↑</button>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-effect transition-all duration-300" id="navbar" role="navigation" aria-label="Menu principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#home" class="text-2xl font-display font-bold text-gradient" aria-label="Juliana Costa - Página inicial">
+          Juliana Costa
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Início</a>
+          <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">Sobre</a>
+          <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition-colors">Certificações</a>
+          <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Habilidades</a>
+          <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projetos</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contato</a>
+          <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors" aria-label="Ir para seção de contato">
+            Contato
+          </button>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden" id="mobile-menu-btn" aria-label="Abrir menu">
+          <i class="fas fa-bars text-2xl text-gray-700"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu" role="menu" aria-labelledby="mobile-menu-btn">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm">
+        <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Início</a>
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">Sobre</a>
+        <a href="#certifications" class="block px-3 py-2 text-gray-700 hover:text-primary">Certificações</a>
+        <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Habilidades</a>
+        <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projetos</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contato</a>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden" aria-labelledby="hero-title">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 gradient-bg opacity-10"></div>
+    <div class="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/20 rounded-full animate-float" style="animation-delay: 4s;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="animate-fade-in">
+        <div class="mb-8">
+          <h1 id="hero-title" class="text-4xl md:text-6xl font-display font-bold mb-4">
+            Olá, eu sou <span class="text-gradient">Juliana Costa</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+            <span id="typing-effect"></span>
+          </h2>
+        </div>
+        
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Desenvolvedora Full Stack com <span class="font-semibold text-primary">3+ anos de experiência</span> 
+          criando soluções web inovadoras. Especializada em aplicações 
+          <span class="font-semibold text-secondary">seguras</span>, 
+          <span class="font-semibold text-accent">acessíveis</span> e 
+          <span class="font-semibold text-primary">de alta performance</span>.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all duration-300">
+            <i class="fas fa-eye mr-2"></i>
+            Ver Meus Projetos
+          </a>
+          <a href="#contact" class="border-2 border-primary text-primary px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">
+            <i class="fas fa-paper-plane mr-2"></i>
+            Entre em Contato
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary mb-2">3+</div>
+            <div class="text-gray-600">Anos de Experiência</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-secondary mb-2">8</div>
+            <div class="text-gray-600">Projetos Destacados</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-accent mb-2">15+</div>
+            <div class="text-gray-600">Tecnologias Dominadas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-gray-400 hover:text-primary transition-colors" aria-label="Ir para seção sobre mim">
+        <i class="fas fa-chevron-down text-2xl" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white" aria-labelledby="about-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="about-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Sobre <span class="text-gradient">Mim</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Sou graduada em <strong>Análise de Sistemas</strong> e pós-graduada em 
+            <strong>Segurança da Informação</strong>. Atuo como desenvolvedora full stack, 
+            com domínio de tecnologias front-end como HTML5, CSS3, JavaScript, TypeScript, 
+            Tailwind CSS e Angular.
+          </p>
+          
+          <p class="text-lg text-gray-600 leading-relaxed">
+            No back-end, trabalho com <strong>PHP (Laravel)</strong> e <strong>MySQL</strong>, 
+            construindo APIs robustas e seguras. Tenho conhecimento em Node.js e Java, 
+            e utilizo Git para controle de versão.
+          </p>
+          
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Valorizo a construção de soluções <strong>seguras</strong>, 
+            <strong>acessíveis</strong> e <strong>altamente performáticas</strong>, 
+            com foco em boas práticas e código limpo.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <div class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-shield-alt mr-2"></i>
+              Segurança
+            </div>
+            <div class="bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-universal-access mr-2"></i>
+              Acessibilidade
+            </div>
+            <div class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-tachometer-alt mr-2"></i>
+              Performance
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary to-secondary p-1 rounded-2xl">
+            <img src="images/hero-banner.png" alt="Juliana Costa - Foto de perfil" class="w-full h-auto rounded-2xl" loading="lazy" width="400" height="400">
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary">3+</div>
+              <div class="text-sm text-gray-600">Anos de Experiência</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-20 bg-white" aria-labelledby="certifications-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="certifications-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          <span class="text-gradient">Certificações</span> & Formação
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Formação contínua e certificações que validam meu conhecimento técnico e metodológico
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Gestão e Processos -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-primary">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-cogs text-primary text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Gestão & Processos</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Análise de Processos (BPM)</li>
+            <li>• Gestão de Projetos (PMI/Scrum)</li>
+            <li>• ITIL & Governança de TI</li>
+            <li>• ISO 9001 & Qualidade</li>
+          </ul>
+        </div>
+
+        <!-- Análise e Requisitos -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-secondary">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-clipboard-list text-secondary text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Análise & Requisitos</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Levantamento de Requisitos</li>
+            <li>• Modelagem BPMN 2.0</li>
+            <li>• Casos de Uso & User Stories</li>
+            <li>• Bizagi Modeler</li>
+          </ul>
+        </div>
+
+        <!-- UX/UI Design -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-palette text-accent text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">UX/UI Design</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Design Thinking</li>
+            <li>• Prototipagem & Usabilidade</li>
+            <li>• Design Responsivo</li>
+            <li>• Testes de Usabilidade</li>
+          </ul>
+        </div>
+
+        <!-- Segurança e Compliance -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Segurança & Compliance</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• LGPD & Proteção de Dados</li>
+            <li>• Governança de Dados</li>
+            <li>• ISO 27001</li>
+            <li>• Políticas de Segurança</li>
+          </ul>
+        </div>
+
+        <!-- Marketing Digital -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-bullhorn text-purple-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Marketing Digital</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• SEO Técnico</li>
+            <li>• Inbound Marketing</li>
+            <li>• Copywriting</li>
+            <li>• Search Console</li>
+          </ul>
+        </div>
+
+        <!-- Desenvolvimento -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-code text-blue-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Desenvolvimento</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Frontend Completo</li>
+            <li>• Backend PHP</li>
+            <li>• Bancos de Dados</li>
+            <li>• Performance Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4">Formação contínua com mais de <strong>25 certificações</strong> em tecnologia</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+          <span class="bg-gray-100 px-3 py-1 rounded-full">Udemy</span>
+          <span class="bg-gray-100 px-3 py-1 rounded-full">Alura</span>
+          <span class="bg-gray-100 px-3 py-1 rounded-full">Danki Code</span>
+          <span class="bg-gray-100 px-3 py-1 rounded-full">Expert Digital</span>
+          <span class="bg-gray-100 px-3 py-1 rounded-full">B7Web</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50" aria-labelledby="skills-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="skills-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Minhas <span class="text-gradient">Habilidades</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Combino desenvolvimento técnico com análise de requisitos e gestão de projetos para criar soluções web completas e de alta qualidade
+        </p>
+      </div>
+      
+      <!-- Skill Categories -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4" aria-hidden="true">
+            <i class="fas fa-palette text-primary text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Frontend</h3>
+          <p class="text-gray-600">HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4" aria-hidden="true">
+            <i class="fas fa-server text-secondary text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Backend</h3>
+          <p class="text-gray-600">PHP, Laravel, Node.js, MySQL, APIs RESTful</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4" aria-hidden="true">
+            <i class="fas fa-search text-accent text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">SEO & Performance</h3>
+          <p class="text-gray-600">SEO Técnico, Core Web Vitals, Otimização</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4" aria-hidden="true">
+            <i class="fas fa-tools text-green-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Análise & Gestão</h3>
+          <p class="text-gray-600">Análise de Requisitos, BPM, Gestão de Projetos</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4" aria-hidden="true">
+            <i class="fas fa-palette text-purple-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">UX/UI Design</h3>
+          <p class="text-gray-600">Design Thinking, Prototipagem, Usabilidade</p>
+        </div>
+      </div>
+      
+      <!-- Skill Bars -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-semibold mb-6">Tecnologias Frontend</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">HTML5</span>
+                <span class="text-primary font-semibold">100%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">CSS3</span>
+                <span class="text-primary font-semibold">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">JavaScript</span>
+                <span class="text-primary font-semibold">85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">TypeScript</span>
+                <span class="text-primary font-semibold">75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Tailwind CSS</span>
+                <span class="text-primary font-semibold">80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <h3 class="text-2xl font-semibold mb-6">Tecnologias Backend</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">PHP</span>
+                <span class="text-secondary font-semibold">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Laravel</span>
+                <span class="text-secondary font-semibold">80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">MySQL</span>
+                <span class="text-secondary font-semibold">85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Node.js</span>
+                <span class="text-secondary font-semibold">60%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Git</span>
+                <span class="text-secondary font-semibold">85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white" aria-labelledby="projects-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="projects-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Projetos <span class="text-gradient">Destacados</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Aplicações web inovadoras que resolvem problemas reais e entregam valor aos usuários
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-1.jpeg" alt="Gerador de Propostas - Sistema para criação de propostas comerciais em PDF" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Gerador de Propostas</h3>
+            <p class="text-gray-600 mb-4">Sistema para automatizar criação e envio de propostas comerciais em PDF com identidade visual personalizada.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">PHP</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">Laravel</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">PDF</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-2.jpeg" alt="Encurtador de Links - Sistema para encurtamento de URLs com estatísticas" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Encurtador de Links</h3>
+            <p class="text-gray-600 mb-4">Sistema para encurtamento de URLs com estatísticas em tempo real e foco em segurança.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">PHP</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">MySQL</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">API</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-3.jpeg" alt="Calculadora Freelancer - Aplicação para cálculo de preços de serviços" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Calculadora Freelancer</h3>
+            <p class="text-gray-600 mb-4">Aplicação para freelancers calcularem o valor ideal de seus serviços de forma profissional.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">CSS3</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">Calculadora</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-4.jpeg" alt="Baixador de Vídeos YouTube - Ferramenta para download de vídeos e áudios" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Baixador YouTube</h3>
+            <p class="text-gray-600 mb-4">Aplicação para baixar vídeos e áudios do YouTube em diferentes formatos e resoluções.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">Node.js</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">API</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">Download</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-5.jpeg" alt="Gerador README GitHub - Ferramenta para criação de arquivos README.md" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Gerador README GitHub</h3>
+            <p class="text-gray-600 mb-4">Ferramenta para criar arquivos README.md personalizados e profissionais para projetos GitHub.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">Markdown</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">GitHub</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+          <div class="relative overflow-hidden">
+            <img src="images/project-6.jpeg" alt="QR Code PIX - Gerador de códigos PIX para pagamentos" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">QR Code PIX</h3>
+            <p class="text-gray-600 mb-4">Gerador de códigos PIX válidos com QR Code para transações de pagamento instantâneas.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
+              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">QR Code</span>
+              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">PIX</span>
+            </div>
+            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 inline-flex items-center">
+          <i class="fab fa-github mr-2"></i>
+          Ver Todos os Projetos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50" aria-labelledby="contact-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="contact-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Vamos <span class="text-gradient">Conversar</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Estou sempre aberta a novos projetos e oportunidades. 
+          Vamos transformar sua ideia em realidade!
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="text-center">
+            <h3 class="text-2xl font-semibold mb-6">Informações de Contato</h3>
+            <p class="text-gray-600 mb-8">
+              Entre em contato comigo através de qualquer um dos canais abaixo. 
+              Respondo rapidamente e adoro conversar sobre novos projetos!
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-200 transition-colors">
+                <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">WhatsApp</div>
+                <div class="text-gray-600">+55 (61) 98101-6563</div>
+              </div>
+            </a>
+            
+            <a href="mailto:juhcosta23@gmail.com" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">E-mail</div>
+                <div class="text-gray-600">juhcosta23@gmail.com</div>
+              </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/bg21/" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">LinkedIn</div>
+                <div class="text-gray-600">linkedin.com/in/bg21</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/bg21" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-gray-200 transition-colors">
+                <i class="fab fa-github text-gray-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">GitHub</div>
+                <div class="text-gray-600">github.com/bg21</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h3 class="text-2xl font-display font-bold mb-4">Juliana Costa</h3>
+        <p class="text-gray-400 mb-8">Transformando ideias em soluções digitais inovadoras</p>
+        
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://github.com/bg21" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bg21/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8">
+          <p class="text-gray-400">&copy; 2024 Juliana Costa. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 animate-bounce" aria-label="Contatar via WhatsApp">
+    <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 left-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors z-50 opacity-0 invisible" aria-label="Voltar ao topo da página">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- JavaScript -->
   <script src="js/script.js"></script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juliana Costa",
+    "jobTitle": "Desenvolvedora Full Stack",
+    "description": "Desenvolvedora Full Stack especializada em PHP, Laravel, JavaScript, TypeScript e SEO com 3+ anos de experiência",
+    "url": "https://julianacosta.dev",
+    "image": "https://julianacosta.dev/images/hero-banner.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/bg21/",
+      "https://github.com/bg21"
+    ],
+    "knowsAbout": [
+      "PHP",
+      "Laravel", 
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "MySQL",
+      "SEO",
+      "Acessibilidade Web",
+      "Desenvolvimento Web",
+      "Gestão de Projetos",
+      "Análise de Requisitos"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Certificação",
+        "recognizedBy": "Udemy",
+        "name": "Análise de Processos"
+      },
+      {
+        "@type": "EducationalOccupationalCredential", 
+        "credentialCategory": "Certificação",
+        "recognizedBy": "Udemy",
+        "name": "Gestão de Tecnologia da Informação"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Certificação", 
+        "recognizedBy": "Danki Code",
+        "name": "UX Design"
+      }
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelancer"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+55-61-98101-6563",
+      "email": "juhcosta23@gmail.com"
+    }
+  }
+  </script>
+  
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Juliana Costa - Desenvolvimento Web",
+    "url": "https://julianacosta.dev",
+    "logo": "https://julianacosta.dev/images/logo.png",
+    "description": "Desenvolvimento de aplicações web seguras, acessíveis e de alta performance",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+55-61-98101-6563",
+      "email": "juhcosta23@gmail.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/bg21/",
+      "https://github.com/bg21"
+    ]
+  }
+  </script>
+  
+  <!-- WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Juliana Costa - Portfólio",
+    "url": "https://julianacosta.dev",
+    "description": "Portfólio profissional de Juliana Costa, desenvolvedora Full Stack especializada em PHP, Laravel, JavaScript e SEO",
+    "author": {
+      "@type": "Person",
+      "name": "Juliana Costa"
+    },
+    "publisher": {
+      "@type": "Person", 
+      "name": "Juliana Costa"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://julianacosta.dev/#projects",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </body>
 </html> 
