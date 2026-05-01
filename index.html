@@ -156,7 +156,6 @@
           <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">Sobre</a>
           <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition-colors">Certificações</a>
           <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Habilidades</a>
-          <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projetos</a>
           <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contato</a>
           <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors" aria-label="Ir para seção de contato">
             Contato
@@ -177,7 +176,6 @@
         <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">Sobre</a>
         <a href="#certifications" class="block px-3 py-2 text-gray-700 hover:text-primary">Certificações</a>
         <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Habilidades</a>
-        <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projetos</a>
         <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contato</a>
       </div>
     </div>
@@ -213,25 +211,17 @@
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all duration-300">
-            <i class="fas fa-eye mr-2"></i>
-            Ver Meus Projetos
-          </a>
-          <a href="#contact" class="border-2 border-primary text-primary px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">
+          <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all duration-300">
             <i class="fas fa-paper-plane mr-2"></i>
             Entre em Contato
           </a>
         </div>
         
         <!-- Stats -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           <div class="text-center">
             <div class="text-3xl font-bold text-primary mb-2">3+</div>
             <div class="text-gray-600">Anos de Experiência</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-secondary mb-2">8</div>
-            <div class="text-gray-600">Projetos Destacados</div>
           </div>
           <div class="text-center">
             <div class="text-3xl font-bold text-accent mb-2">15+</div>
@@ -608,136 +598,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white" aria-labelledby="projects-title">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 id="projects-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
-          Projetos <span class="text-gradient">Destacados</span>
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Aplicações web inovadoras que resolvem problemas reais e entregam valor aos usuários
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-1.jpeg" alt="Gerador de Propostas - Sistema para criação de propostas comerciais em PDF" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Gerador de Propostas</h3>
-            <p class="text-gray-600 mb-4">Sistema para automatizar criação e envio de propostas comerciais em PDF com identidade visual personalizada.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">PHP</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">Laravel</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">PDF</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-2.jpeg" alt="Encurtador de Links - Sistema para encurtamento de URLs com estatísticas" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Encurtador de Links</h3>
-            <p class="text-gray-600 mb-4">Sistema para encurtamento de URLs com estatísticas em tempo real e foco em segurança.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">PHP</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">MySQL</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">API</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-3.jpeg" alt="Calculadora Freelancer - Aplicação para cálculo de preços de serviços" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Calculadora Freelancer</h3>
-            <p class="text-gray-600 mb-4">Aplicação para freelancers calcularem o valor ideal de seus serviços de forma profissional.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">CSS3</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">Calculadora</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-        
-        <!-- Project 4 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-4.jpeg" alt="Baixador de Vídeos YouTube - Ferramenta para download de vídeos e áudios" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Baixador YouTube</h3>
-            <p class="text-gray-600 mb-4">Aplicação para baixar vídeos e áudios do YouTube em diferentes formatos e resoluções.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">Node.js</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">API</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">Download</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-        
-        <!-- Project 5 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-5.jpeg" alt="Gerador README GitHub - Ferramenta para criação de arquivos README.md" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Gerador README GitHub</h3>
-            <p class="text-gray-600 mb-4">Ferramenta para criar arquivos README.md personalizados e profissionais para projetos GitHub.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">Markdown</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">GitHub</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-        
-        <!-- Project 6 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-          <div class="relative overflow-hidden">
-            <img src="images/project-6.jpeg" alt="QR Code PIX - Gerador de códigos PIX para pagamentos" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="192">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">QR Code PIX</h3>
-            <p class="text-gray-600 mb-4">Gerador de códigos PIX válidos com QR Code para transações de pagamento instantâneas.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-primary/10 text-primary px-2 py-1 rounded text-sm">JavaScript</span>
-              <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-sm">QR Code</span>
-              <span class="bg-accent/10 text-accent px-2 py-1 rounded text-sm">PIX</span>
-            </div>
-            <a href="#" class="text-primary font-semibold hover:underline">Ver Projeto →</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="text-center mt-12">
-        <a href="#" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 inline-flex items-center">
-          <i class="fab fa-github mr-2"></i>
-          Ver Todos os Projetos
-        </a>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-gray-50" aria-labelledby="contact-title">
