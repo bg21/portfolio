@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Juliana Costa | Desenvolvedora Web - PHP, Laravel, MySQL & Integrações</title>
+  <meta name="title" content="Juliana Costa | Desenvolvedora Web - PHP, Laravel, MySQL & Integrações">
+  <meta name="description" content="Desenvolvedora Web com foco em PHP, Laravel, JavaScript e MySQL. Criação e manutenção de sistemas web, integrações de APIs, SEO técnico e performance web.">
+  <meta name="keywords" content="desenvolvedora web, PHP, Laravel, MySQL, JavaScript, APIs, integrações, SEO técnico, performance web, segurança da informação, desenvolvimento web">
+  <meta name="author" content="Juliana Costa">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://julianacosta.dev/">
+  <meta property="og:title" content="Juliana Costa | Desenvolvedora Web - PHP, Laravel, MySQL & Integrações">
+  <meta property="og:description" content="Desenvolvedora Web com experiência em PHP, Laravel, MySQL e JavaScript. Criação de sistemas, integrações de APIs, SEO técnico e performance web.">
+  <meta property="og:image" content="https://julianacosta.dev/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Juliana Costa - Portfólio">
+  <meta property="og:locale" content="pt_BR">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://julianacosta.dev/">
+  <meta property="twitter:title" content="Juliana Costa | Desenvolvedora Web - PHP, Laravel, MySQL & Integrações">
+  <meta property="twitter:description" content="Desenvolvedora Web com experiência em PHP, Laravel, MySQL e JavaScript. Criação de sistemas, integrações de APIs, SEO técnico e performance web.">
+  <meta property="twitter:image" content="https://julianacosta.dev/images/og-image.jpg">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#6366f1">
+  <meta name="msapplication-TileColor" content="#6366f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Juliana Costa">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://julianacosta.dev/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            accent: '#f59e0b',
+            dark: '#1f2937',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'display': ['Poppins', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'fade-in': 'fadeIn 0.8s ease-out'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+      to { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+  <!-- Skip to main content link for screen readers -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-50">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-effect transition-all duration-300" id="navbar" role="navigation" aria-label="Menu principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#home" class="text-2xl font-display font-bold text-gradient" aria-label="Juliana Costa - Página inicial">
+          Juliana Costa
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Início</a>
+          <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">Sobre</a>
+          <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition-colors">Cursos</a>
+          <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Competências</a>
+          <a href="#digital-presence" class="nav-link text-gray-700 hover:text-primary transition-colors">SEO & Analytics</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contato</a>
+          <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})" aria-label="Ir para seção de contato">
+            Contato
+          </button>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden" id="mobile-menu-btn" aria-label="Abrir menu">
+          <i class="fas fa-bars text-2xl text-gray-700"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu" role="menu" aria-labelledby="mobile-menu-btn">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm">
+        <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Início</a>
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">Sobre</a>
+        <a href="#certifications" class="block px-3 py-2 text-gray-700 hover:text-primary">Cursos</a>
+        <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Competências</a>
+        <a href="#digital-presence" class="block px-3 py-2 text-gray-700 hover:text-primary">SEO & Analytics</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden" aria-labelledby="hero-title">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 gradient-bg opacity-10"></div>
+    <div class="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/20 rounded-full animate-float" style="animation-delay: 4s;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="animate-fade-in">
+        <div class="mb-8">
+          <h1 id="hero-title" class="text-4xl md:text-6xl font-display font-bold mb-4">
+            Olá, eu sou <span class="text-gradient">Juliana Costa</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+            <span id="typing-effect">Desenvolvedora Web | PHP & Laravel</span>
+          </h2>
+        </div>
+        
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Desenvolvedora web com experiência em <span class="font-semibold text-primary">PHP</span>, 
+          <span class="font-semibold text-secondary">Laravel</span>, 
+          <span class="font-semibold text-accent">JavaScript</span> e 
+          <span class="font-semibold text-primary">MySQL</span>, 
+          atuando na criação e manutenção de sistemas, integrações de APIs e aplicações web com foco em segurança, organização e desempenho.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+          <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg">
+            <i class="fas fa-paper-plane mr-2"></i>
+            Entre em Contato
+          </a>
+          <a href="#about" class="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <i class="fas fa-user mr-2 text-primary"></i>
+            Conhecer Trajetória
+          </a>
+        </div>
+        
+        <!-- Tech Pills / Focus Areas -->
+        <div class="flex flex-wrap justify-center items-center gap-2 max-w-2xl mx-auto pt-2">
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fab fa-php text-primary mr-1.5"></i>PHP
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fab fa-laravel text-red-500 mr-1.5"></i>Laravel
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fab fa-js-square text-amber-500 mr-1.5"></i>JavaScript
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fas fa-database text-blue-500 mr-1.5"></i>MySQL
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fas fa-plug text-purple-500 mr-1.5"></i>APIs & Integrações
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fas fa-chart-line text-accent mr-1.5"></i>SEO Técnico
+          </span>
+          <span class="bg-white/80 border border-gray-200 text-gray-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+            <i class="fas fa-tachometer-alt text-teal-600 mr-1.5"></i>Performance Web
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-gray-400 hover:text-primary transition-colors" aria-label="Ir para seção sobre mim">
+        <i class="fas fa-chevron-down text-2xl" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white" aria-labelledby="about-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="about-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Sobre <span class="text-gradient">Mim</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Sou graduada em <strong>Análise de Sistemas</strong> e pós-graduada em 
+            <strong>Segurança da Informação</strong>. Desenvolvo aplicações e integrações web em <strong>PHP</strong>, 
+            com foco em segurança, organização e desempenho.
+          </p>
+          
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Tenho experiência prática no desenvolvimento e manutenção de <strong>sistemas web, integrações de APIs</strong> 
+            (como Stripe, Asaas, ActiveCampaign e webhooks), geração de relatórios e PDFs, 
+            e modelagem de banco de dados com <strong>MySQL</strong>.
+          </p>
+          
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Meu grande diferencial é conectar o desenvolvimento às <strong>necessidades reais do negócio</strong>: 
+            combino código funcional com <strong>análise de processos (BPMN)</strong>, <strong>levantamento de requisitos</strong> e 
+            <strong>segurança da informação</strong> para construir soluções que façam sentido tanto tecnicamente quanto para a operação do negócio.
+          </p>
+          
+          <div class="flex flex-wrap gap-3">
+            <div class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-server mr-2"></i>
+              PHP & Laravel
+            </div>
+            <div class="bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-plug mr-2"></i>
+              APIs & Integrações
+            </div>
+            <div class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-shield-alt mr-2"></i>
+              Segurança & LGPD
+            </div>
+            <div class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+              <i class="fas fa-laptop-code mr-2"></i>
+              Sistemas Web
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary to-secondary p-1 rounded-2xl">
+            <img src="images/hero-banner.png" alt="Juliana Costa - Foto de perfil" class="w-full h-auto rounded-2xl" loading="lazy" width="400" height="400">
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+            <div class="text-center">
+              <div class="text-xl font-bold text-primary">Soluções Web</div>
+              <div class="text-sm text-gray-600">PHP • Integrações • Processos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-20 bg-white" aria-labelledby="certifications-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="certifications-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          <span class="text-gradient">Cursos</span> & Formação
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Formação contínua que combina desenvolvimento de software, segurança da informação e processos
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Desenvolvimento Web -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-primary">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-code text-primary text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Desenvolvimento Web</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Back-end em PHP & Laravel</li>
+            <li>• Desenvolvimento Front-end (HTML5, CSS3, JS)</li>
+            <li>• Modelagem & Bancos de Dados MySQL</li>
+            <li>• APIs RESTful, Webhooks & Integrações</li>
+          </ul>
+        </div>
+
+        <!-- Análise e Requisitos -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-secondary">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-clipboard-list text-secondary text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Análise & Requisitos</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Levantamento de Requisitos</li>
+            <li>• Modelagem BPMN 2.0 (Bizagi Modeler)</li>
+            <li>• Casos de Uso & Histórias de Usuário</li>
+            <li>• Análise e Melhoria de Processos</li>
+          </ul>
+        </div>
+
+        <!-- Segurança e Compliance -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Segurança & LGPD</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Pós-graduação em Segurança da Informação</li>
+            <li>• LGPD & Proteção de Dados</li>
+            <li>• Governança e Boas Práticas de TI</li>
+            <li>• Políticas de Segurança e Acesso</li>
+          </ul>
+        </div>
+
+        <!-- SEO & Otimização -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-bullhorn text-purple-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">SEO & Otimização</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• SEO Técnico & On-Page</li>
+            <li>• Core Web Vitals & Performance Web</li>
+            <li>• Google Search Console, indexação e análise de desempenho</li>
+            <li>• Estrutura e performance de páginas</li>
+          </ul>
+        </div>
+
+        <!-- UX/UI & Usabilidade -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-palette text-accent text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">UX/UI & Usabilidade</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Design Responsivo & Acessibilidade Web</li>
+            <li>• Boas práticas de acessibilidade e semântica HTML</li>
+            <li>• Prototipagem & Interface Funcional</li>
+            <li>• Testes de Navegabilidade</li>
+          </ul>
+        </div>
+
+        <!-- Gestão & Metodologias -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-cogs text-blue-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold">Gestão & Metodologias</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>• Gestão Ágil de Projetos (Scrum)</li>
+            <li>• ITIL & Governança de TI</li>
+            <li>• ISO 9001 & Qualidade</li>
+            <li>• Diagnóstico e Manutenção de Aplicações</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4 font-medium">25+ cursos e formações complementares em tecnologia, desenvolvimento, segurança, processos e marketing digital</p>
+        <div class="flex flex-wrap justify-center gap-3 text-sm text-gray-600">
+          <span class="bg-gray-100 px-3.5 py-1.5 rounded-full border border-gray-200">Udemy</span>
+          <span class="bg-gray-100 px-3.5 py-1.5 rounded-full border border-gray-200">Alura</span>
+          <span class="bg-gray-100 px-3.5 py-1.5 rounded-full border border-gray-200">Expert Digital</span>
+          <span class="bg-gray-100 px-3.5 py-1.5 rounded-full border border-gray-200">B7Web</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50" aria-labelledby="skills-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="skills-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Competências & <span class="text-gradient">Habilidades</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Tecnologias e ferramentas que utilizo no desenvolvimento e manutenção de aplicações web
+        </p>
+      </div>
+      
+      <!-- Competências Estruturadas por Nível e Aplicação -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Back-end & Banco de Dados -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 space-y-6">
+          <div class="flex items-center space-x-3 pb-4 border-b border-gray-100">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+              <i class="fas fa-server text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Back-end & Banco de Dados</h3>
+              <p class="text-sm text-gray-500">Desenvolvimento de sistemas, APIs e persistência</p>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-php text-primary text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">PHP</span>
+                  <p class="text-xs text-gray-500">POO, MVC, sistemas administrativos, geração de PDF</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700">Avançado</span>
+            </div>
+            
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-laravel text-red-500 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">Laravel</span>
+                  <p class="text-xs text-gray-500">Rotas, Controllers, Eloquent ORM, Blade, Migrations</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">Intermediário</span>
+            </div>
+            
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-database text-blue-600 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">MySQL</span>
+                  <p class="text-xs text-gray-500">Modelagem relacional, consultas, índices e integridade</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">Intermediário</span>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-plug text-purple-600 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">APIs & Integrações</span>
+                  <p class="text-xs text-gray-500">Stripe, Asaas, ActiveCampaign, APIs REST e Webhooks</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-700">Experiência Prática</span>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-git-alt text-orange-600 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">Git & GitHub</span>
+                  <p class="text-xs text-gray-500">Controle de versão, branches, commits semânticos</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">Intermediário</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Front-end & Interface Web -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 space-y-6">
+          <div class="flex items-center space-x-3 pb-4 border-b border-gray-100">
+            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+              <i class="fas fa-laptop-code text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Front-end & Interface Web</h3>
+              <p class="text-sm text-gray-500">Interfaces funcionais, responsividade e interatividade</p>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-html5 text-orange-500 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">HTML5 & CSS3</span>
+                  <p class="text-xs text-gray-500">Semântica, acessibilidade (a11y), CSS moderno</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700">Avançado</span>
+            </div>
+            
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-js text-amber-500 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">JavaScript</span>
+                  <p class="text-xs text-gray-500">Manipulação de DOM, AJAX/Fetch, eventos e validações</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">Intermediário</span>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-code text-blue-500 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">TypeScript</span>
+                  <p class="text-xs text-gray-500">Tipagem estática e organização de código</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-200 text-gray-700">Básico / Intermediário</span>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-wind text-teal-500 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">Tailwind CSS & Responsividade</span>
+                  <p class="text-xs text-gray-500">Layouts responsivos, mobile-first e estilização moderna</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700">Prático</span>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100/80 transition-colors">
+              <div class="flex items-center space-x-3">
+                <i class="fab fa-angular text-red-600 text-xl w-6 text-center"></i>
+                <div>
+                  <span class="font-semibold text-gray-800">Angular & Node.js</span>
+                  <p class="text-xs text-gray-500">Conceitos fundamentais e suporte em manutenção</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-200 text-gray-700">Complementar</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO, Analytics & Presença Digital Section -->
+  <section id="digital-presence" class="py-20 bg-white" aria-labelledby="digital-presence-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="digital-presence-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          SEO, Analytics & <span class="text-gradient">Presença Digital</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Conhecimentos aplicados à otimização, acompanhamento e estruturação de sites e aplicações web
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- SEO Técnico -->
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-gray-200">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+              <i class="fas fa-search text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">SEO Técnico</h3>
+              <p class="text-sm text-gray-500">Fundamentos técnicos para motores de busca</p>
+            </div>
+          </div>
+          
+          <ul class="space-y-3">
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>SEO On-page</span>
+            </li>
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>Indexação</span>
+            </li>
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>Meta tags e dados estruturados</span>
+            </li>
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>Estrutura semântica</span>
+            </li>
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>Core Web Vitals</span>
+            </li>
+            <li class="flex items-center text-gray-700 text-sm">
+              <i class="fas fa-check-circle text-primary mr-3"></i>
+              <span>Performance Web</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-gray-200">
+            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
+              <i class="fas fa-chart-line text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Ferramentas</h3>
+              <p class="text-sm text-gray-500">Métricas, análise e presença institucional</p>
+            </div>
+          </div>
+          
+          <ul class="space-y-4">
+            <li class="p-4 bg-white rounded-xl border border-gray-100 flex items-start space-x-3">
+              <i class="fab fa-google text-red-500 text-xl mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-gray-800 text-base">Google Search Console</span>
+                <p class="text-xs text-gray-500 mt-0.5">Monitoramento de indexação, consultas de pesquisa e diagnóstico técnico.</p>
+              </div>
+            </li>
+            <li class="p-4 bg-white rounded-xl border border-gray-100 flex items-start space-x-3">
+              <i class="fas fa-chart-pie text-amber-500 text-xl mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-gray-800 text-base">Google Analytics</span>
+                <p class="text-xs text-gray-500 mt-0.5">Conhecimento em métricas de acesso, comportamento de navegação e análise de audiência.</p>
+              </div>
+            </li>
+            <li class="p-4 bg-white rounded-xl border border-gray-100 flex items-start space-x-3">
+              <i class="fas fa-store text-blue-600 text-xl mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-gray-800 text-base">Perfil da Empresa no Google</span>
+                <p class="text-xs text-gray-500 mt-0.5">Configuração e otimização da presença da empresa nos resultados locais.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Além do Desenvolvimento Web Section -->
+  <section id="other-interests" class="py-16 bg-gray-50" aria-labelledby="other-interests-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 id="other-interests-title" class="text-3xl md:text-4xl font-display font-bold">
+          Além do <span class="text-gradient">Desenvolvimento Web</span>
+        </h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="flex items-center space-x-4 mb-4 pb-4 border-b border-gray-100">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-gamepad text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Desenvolvimento de Jogos</h3>
+              <div class="mt-1">
+                <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">GameMaker 2 • Godot</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Criação de protótipos, mecânicas de gameplay, regras de interação e lógica de programação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50" aria-labelledby="contact-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="contact-title" class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Vamos <span class="text-gradient">Conversar</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Estou sempre aberta a novos projetos e oportunidades. 
+          Vamos transformar sua ideia em realidade!
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="text-center">
+            <h3 class="text-2xl font-semibold mb-6">Informações de Contato</h3>
+            <p class="text-gray-600 mb-8">
+              Entre em contato comigo através de qualquer um dos canais abaixo. 
+              Respondo rapidamente e adoro conversar sobre novos projetos!
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-200 transition-colors">
+                <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">WhatsApp</div>
+                <div class="text-gray-600">+55 (61) 98101-6563</div>
+              </div>
+            </a>
+            
+            <a href="mailto:juhcosta23@gmail.com" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">E-mail</div>
+                <div class="text-gray-600">juhcosta23@gmail.com</div>
+              </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/bg21/" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">LinkedIn</div>
+                <div class="text-gray-600">linkedin.com/in/bg21</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/bg21" target="_blank" rel="noopener" class="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow group">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-gray-200 transition-colors">
+                <i class="fab fa-github text-gray-600 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">GitHub</div>
+                <div class="text-gray-600">github.com/bg21</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h3 class="text-2xl font-display font-bold mb-4">Juliana Costa</h3>
+        <p class="text-gray-400 mb-8">Transformando necessidades de negócio em soluções digitais funcionais e eficientes</p>
+        
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://github.com/bg21" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bg21/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8">
+          <p class="text-gray-400">&copy; 2024 Juliana Costa. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://api.whatsapp.com/send?phone=5561981016563" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 animate-bounce" aria-label="Contatar via WhatsApp">
+    <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 left-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors z-50 opacity-0 invisible" aria-label="Voltar ao topo da página">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juliana Costa",
+    "jobTitle": "Desenvolvedora Web",
+    "description": "Desenvolvedora Web com foco em PHP, Laravel, MySQL, JavaScript, APIs, SEO técnico e performance web",
+    "url": "https://julianacosta.dev",
+    "image": "https://julianacosta.dev/images/hero-banner.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/bg21/",
+      "https://github.com/bg21"
+    ],
+    "knowsAbout": [
+      "PHP",
+      "Laravel", 
+      "MySQL",
+      "APIs RESTful",
+      "Integrações de Pagamentos e Webhooks",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "SEO Técnico",
+      "Performance Web",
+      "Segurança da Informação",
+      "LGPD",
+      "Análise de Requisitos",
+      "Modelagem BPMN"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Certificação",
+        "recognizedBy": "Udemy",
+        "name": "Análise de Processos"
+      },
+      {
+        "@type": "EducationalOccupationalCredential", 
+        "credentialCategory": "Certificação",
+        "recognizedBy": "Udemy",
+        "name": "Gestão de Tecnologia da Informação"
+      }
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Desenvolvedora Independente"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+55-61-98101-6563",
+      "email": "juhcosta23@gmail.com"
+    }
+  }
+  </script>
+  
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Juliana Costa - Soluções Web & Integrações",
+    "url": "https://julianacosta.dev",
+    "logo": "https://julianacosta.dev/images/logo.png",
+    "description": "Desenvolvimento de sistemas web em PHP, integrações de APIs, SEO técnico e performance web",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+55-61-98101-6563",
+      "email": "juhcosta23@gmail.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/bg21/",
+      "https://github.com/bg21"
+    ]
+  }
+  </script>
+  
+  <!-- WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Juliana Costa - Portfólio",
+    "url": "https://julianacosta.dev",
+    "description": "Portfólio profissional de Juliana Costa, desenvolvedora web com foco em PHP, Laravel, integrações e SEO",
+    "author": {
+      "@type": "Person",
+      "name": "Juliana Costa"
+    },
+    "publisher": {
+      "@type": "Person", 
+      "name": "Juliana Costa"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://julianacosta.dev/#contact",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</body>
+</html> 

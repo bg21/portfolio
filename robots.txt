@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://julianacosta.dev/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Allow all resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
