@@ -25,5 +25,5 @@ Aplicação web estática, responsiva e otimizada, focada em demonstrar experiê
 
 ## 📬 Contato & Redes
 
-- **LinkedIn:** [linkedin.com/in/bg21](https://www.linkedin.com/in/bg21/)
+- **LinkedIn:** [linkedin.com/in/devbg21](https://www.linkedin.com/in/devbg21/)
 - **E-mail:** [juliana.costa@exemplo.com](mailto:juliana.costa@exemplo.com)
