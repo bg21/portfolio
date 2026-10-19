@@ -1166,7 +1166,7 @@
       const b = mk("button", "", "pc"); b.append(p.i ? shot(p) : mk("div", p.n[0], "pi"), mk("h3", p.n), mk("div", p.t, "t"), mk("div", "Meu papel: " + p.p, "cr"), pills(p.s));
       b.onclick = () => {
         const dc = $("#dc"); dc.replaceChildren(p.i ? shot(p) : mk("div", p.n[0], "pi"), mk("h3", p.n), mk("p", p.d)); const dl = mk("dl"); dl.append(mk("dt", "Meu papel"), mk("dd", p.p), mk("dt", "Tecnologias"), mk("dd", p.s.join(", "))); dc.append(dl);
-        const r = mk("div", "", "row"); r.style.marginTop = "20px"; p.l.forEach(l => { const a = mk("a", l[0], "btn l"); a.href = l[1]; a.target = "_blank"; a.rel = "noopener noreferrer"; r.append(a) }); dc.append(r); dlg.showModal()
+        const r = mk("div", "", "row"); r.style.marginTop = "20px"; p.l.forEach(l => { const a = mk("a", l[0], "btn l"); a.href = l[1]; a.target = "_blank"; a.rel = "noopener noreferrer"; a.onclick = e => { e.preventDefault(); window.open(l[1], "_blank", "noopener,noreferrer"); }; r.append(a) }); dc.append(r); dlg.showModal()
       }; $("#grid").append(b)
     });
     exp.forEach(j => { const e = mk("div", "", "job"), l = mk("div"), r = mk("ul"); l.append(mk("div", j.d, "d"), mk("h3", j.c), mk("div", "🏢 " + j.e, "m")); if (j.loc) l.append(mk("div", "📍 " + j.loc, "m")); j.b.forEach(x => r.append(mk("li", x))); e.append(l, r); $("#tl").append(e) });
